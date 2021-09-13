@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import users from "./redux/users.reducer";
-import actions from "./redux/actions";
-import TableA from "./components/table"
-import TablePage from "./components/responsiveTable"
+import TableA from "./components/table";
 
 const reducers = combineReducers({ users });
 const store = createStore(reducers);
 
 window.store = store;
 function App() {
-  return (
-    
+    return (
         <Provider store={store}>
-          <TableA></TableA>
+            <TableA></TableA>
         </Provider>
-      
-  );
+    );
 }
 
 export default App;
